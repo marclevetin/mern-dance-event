@@ -11,6 +11,6 @@ judgeSchema.virtual('fullName').get(function() {
   return this.firstName + ' ' } this.lastName;
 })
 
-const Judge = mongoose.model("Person", judgeSchema);
+const Judge = mongoose.model("Judge", judgeSchema);
 
 module.exports = Judge;
