@@ -3,10 +3,10 @@ const Schema = mongoose.Schema;
 
 const contestDetailsSchema = new Schema({
   name: { type: String, required: [true, 'Contest name is required'] },
-  price: { type: String, required: [true, 'Contest name is required'] },
+  price: { type: String, required: [true, 'Price is required'] },
   partnerRequired: { type: Boolean, required: [true, 'partnerRequired is required']  },
   prizes: {},
-  isProAm: { type: Boolean, required: [true, 'partnerRequired is required'] },
+  isProAm: { type: Boolean, required: [true, 'isProAm is required'] },
   judgesArray: { type: Array } // not required in case the contest needs to be set up ahead of time
   nextContest: {} // this field will be used to link prelims to finals for example.  Not required because the next contest might not yet be created.
   numberRequiredYesAlts: {
@@ -21,6 +21,6 @@ const contestDetailsSchema = new Schema({
 
 });
 
-const ContestDetails = mongoose.model("contestDetailsSchema", contestDetailsSchema);
+const ContestDetails = mongoose.model("ContestDetailsSchema", contestDetailsSchema);
 
 module.exports = ContestDetails;
