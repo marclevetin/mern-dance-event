@@ -18,18 +18,9 @@ const personSchema = new Schema({
   address: {
     street: String,
     city: String,
-    stateProvince: String, // it's common to have international addresses
+    stateProvince: String, // it's common to have international addresses, so let's leave this open for now.
     postalCode: String
   }
-  name: { type: String, required: [true, 'Event Name is required'] },
-  logo: { type: String },
-  startDate: { type: Date, required: [true, 'Event Start Date is required'] },
-  endDate: {
-    type: Date,
-    required: [true, 'Event End Date is required'],
-    validate: [endDateValidation, 'Event End Date must be after Event Start Date']
-  },
-  location: {type: String, required: true}
 });
 
 const Person = mongoose.model("Person", personSchema);
