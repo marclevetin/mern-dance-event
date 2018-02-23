@@ -1,6 +1,10 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
+const endDateValidation = function(value) {
+  return val > this.startDate;
+}
+
 const eventSchema = new Schema({
   name: { type: String, required: [true, 'Event Name is required'] },
   logo: { type: String },
@@ -14,9 +18,5 @@ const eventSchema = new Schema({
 });
 
 const Event = mongoose.model("Event", eventSchema);
-
-const endDateValidation = function(value) {
-  return val > this.startDate;
-}
 
 module.exports = Event;
