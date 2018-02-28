@@ -8,7 +8,7 @@ const judgeSchema = new Schema({
 });
 
 judgeSchema.virtual('fullName').get(function() {
-  return this.firstName + ' ' + this.lastName };
+  return this.firstName + ' ' + this.lastName ;
 })
 
 const Judge = mongoose.model("Judge", judgeSchema);
