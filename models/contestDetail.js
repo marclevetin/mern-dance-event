@@ -7,8 +7,8 @@ const contestDetailSchema = new Schema({
   partnerRequired: { type: Boolean, required: [true, 'partnerRequired is required']  },
   prizes: {},
   isProAm: { type: Boolean, required: [true, 'isProAm is required'] },
-  judgesArray: { type: Array } // not required in case the contest needs to be set up ahead of time
-  nextContest: {} // this field will be used to link prelims to finals for example.  Not required because the next contest might not yet be created.
+  judgesArray: { type: Array }, // not required in case the contest needs to be set up ahead of time
+  nextContest: {}, // this field will be used to link prelims to finals for example.  Not required because the next contest might not yet be created.
   numberRequiredYesAlts: {
     yes: { type: Number, required: [true, 'Number of Yes is required'] },
     alt: { type: Number, required: [true, 'Number of Alt is required'] }
