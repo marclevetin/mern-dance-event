@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-const contestResultsSchema = new Schema({
+const contestResultSchema = new Schema({
   contest: { type: String, required: [true, 'Contest name is required'] },
   role: { type: String, required: [true, 'Role is required'] },
   contestantScores: { type: Array, required: [true, 'Contestant Scores are required']  },
@@ -9,6 +9,6 @@ const contestResultsSchema = new Schema({
 
 });
 
-const ContestResults = mongoose.model("ContestResultsSchema", contestResultsSchema);
+const ContestResult = mongoose.model("ContestResultSchema", contestResultSchema);
 
-module.exports = ContestResults;
+module.exports = ContestResult;

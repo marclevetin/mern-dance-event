@@ -24,7 +24,7 @@ const personSchema = new Schema({
 });
 
 personSchema.virtual('fullName').get(function() {
-  return this.firstName + ' ' } this.lastName;
+  return this.firstName + ' ' + this.lastName;
 })
 
 const Person = mongoose.model("Person", personSchema);

@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-const contestDetailsSchema = new Schema({
+const contestDetailSchema = new Schema({
   name: { type: String, required: [true, 'Contest name is required'] },
   price: { type: String, required: [true, 'Price is required'] },
   partnerRequired: { type: Boolean, required: [true, 'partnerRequired is required']  },
@@ -21,6 +21,6 @@ const contestDetailsSchema = new Schema({
 
 });
 
-const ContestDetails = mongoose.model("ContestDetailsSchema", contestDetailsSchema);
+const ContestDetail = mongoose.model("ContestDetailSchema", contestDetailSchema);
 
-module.exports = ContestDetails;
+module.exports = ContestDetail;
